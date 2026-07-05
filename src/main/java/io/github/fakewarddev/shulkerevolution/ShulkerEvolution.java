@@ -1,5 +1,6 @@
 package io.github.fakewarddev.shulkerevolution;
 
+import io.github.fakewarddev.shulkerevolution.registry.*;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
@@ -17,9 +18,11 @@ public class ShulkerEvolution implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+		ModBlocks.initialize();
+		ModItems.initialize();
+		ModBlockEntities.initialize();
+		ModItemGroups.initialize();
+		ModScreenHandlers.initialize();
 
 		LOGGER.info("Hello Fabric world!");
 	}

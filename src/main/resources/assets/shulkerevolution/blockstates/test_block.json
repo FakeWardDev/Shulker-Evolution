@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "shulkerevolution:block/test_block"
+    }
+  }
+}
